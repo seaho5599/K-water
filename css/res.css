@@ -105,7 +105,16 @@
     height: 50px;
   }
 }
+@media screen and (max-width: 640px) {
+  
+  .visual-wrap {
+    display: none;
+  }
 
+  .visual-mb {
+    display: block;
+  }
+}
 @media screen and (max-width: 600px) {
   .visual {
     height: 360px;

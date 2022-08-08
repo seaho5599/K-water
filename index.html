@@ -47,6 +47,19 @@
 </head>
 
 <body>
+  <!-- 안내창 -->
+<div class="modal-wrap">
+  <div class="modal-main">
+    <h1>하나제약주식회사 클론코딩</h1>
+    <p>
+      이 사이트는 <b>스터디용</b>으로 제작되었으며 리소스는 <strong>원저작자</strong>에게 있습니다. <br>
+      해당 사이트 관련 문제 사항이 있으시면 연락해주시면 삭제하겠습니다.<br>
+      본 사이트는 Chrome 에 최적화되어 있습니다.
+    </p>
+
+    <button class="modal-close"><i class="fas fa-times"></i></button>
+  </div>
+</div>
   <!-- 모바일 메뉴 -->
   <div class="mobile-menu">
     <ul class="m-menu">
@@ -300,38 +313,81 @@
 
     </div>
     <!--// 상단  -->
-    <!-- 비주얼 -->
-    <section class="visual">
-      <div class="inner">
+<!-- 비주얼 -->
+<section class="visual">
+  <div class="inner">
 
-        <img src="images/visualimg.png" alt="K-water" class="visual-img">
+    <img src="images/visualimg.png" alt="K-water" class="visual-img">
 
-        <div class="visual-wrap">
-          <button class="sw-visual-prev"></button>
+    <div class="visual-wrap">
+      <!-- PC 버전 -->
+      <div class="visual-pc">
+        <button class="sw-visual-prev"></button>
+        <div class="swiper-container sw-visual">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#" class="visual-icon visual-icon1">사이트맵</a></div>
+            <div class="swiper-slide"><a href="#" class="visual-icon visual-icon2">조직도/직원검색</a></div>
+            <div class="swiper-slide"><a href="#" class="visual-icon visual-icon3">채용정보</a></div>
+            <div class="swiper-slide"><a href="#" class="visual-icon visual-icon4">고객요금조회</a></div>
+            <div class="swiper-slide"><a href="#" class="visual-icon visual-icon5">공지사항</a></div>
+            <div class="swiper-slide"><a href="#" class="visual-icon visual-icon6">ALIO공시</a></div>
+            <div class="swiper-slide"><a href="#" class="visual-icon visual-icon7">수도요금 현황</a></div>
+            <div class="swiper-slide"><a href="#" class="visual-icon visual-icon8">뉴스룸</a></div>
+            <div class="swiper-slide"><a href="#" class="visual-icon visual-icon9">정보공개</a></div>
+            <div class="swiper-slide"><a href="#" class="visual-icon visual-icon10">안전경영</a></div>
+            <div class="swiper-slide"><a href="#" class="visual-icon visual-icon11">온라인 고객센터</a></div>
+            <div class="swiper-slide"><a href="#" class="visual-icon visual-icon12">사보</a></div>
+          </div>
+        </div>
+        <button class="sw-visual-next"></button>
+      </div>
+    </div>
+    <!-- MOBILE 버전 -->
+    <div class="visual-mb">
 
-          <div class="swiper-container sw-visual">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><a href="#" class="visual-icon visual-icon1">사이트맵</a></div>
-              <div class="swiper-slide"><a href="#" class="visual-icon visual-icon2">조직도/직원검색</a></div>
-              <div class="swiper-slide"><a href="#" class="visual-icon visual-icon3">채용정보</a></div>
-              <div class="swiper-slide"><a href="#" class="visual-icon visual-icon4">고객요금조회</a></div>
-              <div class="swiper-slide"><a href="#" class="visual-icon visual-icon5">공지사항</a></div>
-              <div class="swiper-slide"><a href="#" class="visual-icon visual-icon6">ALIO공시</a></div>
-              <div class="swiper-slide"><a href="#" class="visual-icon visual-icon7">수도요금 현황</a></div>
-              <div class="swiper-slide"><a href="#" class="visual-icon visual-icon8">뉴스룸</a></div>
-              <div class="swiper-slide"><a href="#" class="visual-icon visual-icon9">정보공개</a></div>
-              <div class="swiper-slide"><a href="#" class="visual-icon visual-icon10">안전경영</a></div>
-              <div class="swiper-slide"><a href="#" class="visual-icon visual-icon11">온라인 고객센터</a></div>
-              <div class="swiper-slide"><a href="#" class="visual-icon visual-icon12">사보</a></div>
-            </div>
+      <div class="swiper-container sw-visual-mb">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <ul>
+              <li>
+                <a href="#" class="visual-icon visual-icon1">사이트맵</a>
+                <a href="#" class="visual-icon visual-icon2">조직도/직원검색</a>
+                <a href="#" class="visual-icon visual-icon3">채용정보</a>
+              </li>
+              <li>
+                <a href="#" class="visual-icon visual-icon4">고객요금조회</a>
+                <a href="#" class="visual-icon visual-icon5">공지사항</a>
+                <a href="#" class="visual-icon visual-icon6">ALIO공시</a>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-slide">
+            <ul>
+              <li>
+                <a href="#" class="visual-icon visual-icon7">수도요금 현황</a>
+                <a href="#" class="visual-icon visual-icon8">뉴스룸</a>
+                <a href="#" class="visual-icon visual-icon9">정보공개</a>
+              </li>
+              <li>
+                <a href="#" class="visual-icon visual-icon10">안전경영</a>
+                <a href="#" class="visual-icon visual-icon11">온라인 고객센터</a>
+                <a href="#" class="visual-icon visual-icon12">사보</a>
+              </li>
+            </ul>
           </div>
 
-          <button class="sw-visual-next"></button>
         </div>
-
+        <div class="sw-visual-mb-pg"></div>
       </div>
-    </section>
-    <!--// 비주얼  -->
+      <div class="visual-mb-ani">
+        <img src="images/fin_bx.svg" alt="" class="fin">
+      </div>
+    </div>          
+
+  </div>
+</section>
+<!--// 비주얼  -->
     <!-- 소개 -->
     <section class="about">
       <div class="inner">

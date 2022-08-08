@@ -1,5 +1,24 @@
 $(document).ready(function () {
-
+  // 안내창 기능
+  // 추가기능:  스크롤바 없에기
+  $('html').css('overflow', 'hiden');
+  let modalWrap = $('.modal-wrap');
+  let modalClose = $('.modal-close');
+  modalClose.click(function () {
+    modalWrap.stop().fadeOut(100);
+    // 추가기능:  스크롤바 살리기
+    $('html').css('overflow', 'auto');
+  });
+  let modalMain = $('.modal-main');
+  // 내용배경 클릭
+  modalMain.click(function (event) {
+    event.stopPropagation();
+  });
+  // 전체 배경 클릭
+  modalWrap.click(function () {
+    modalWrap.stop().fadeOut(100);
+    $('html').css('overflow', 'auto');
+  });
   // 모바일 메뉴
   let mobileMenu = $('.mobile-menu');
   let mobileBt = $('.all-menu');
@@ -343,7 +362,7 @@ window.onload = function () {
   });
 
   // 비주얼 슬라이드
-  new Swiper('.sw-visual', {
+  let swVisualPc = new Swiper('.sw-visual', {
     slidesPerView: 3,
     grid: {
       rows: 2,
@@ -392,6 +411,19 @@ window.onload = function () {
       },
     },
   });
+  let swVIsualMb = new Swiper('.sw-visual-mb',{
+    resistance : true,
+    resistanceRatio : 0,
+    pagination: {
+      el: ".sw-visual-mb-pg",
+      type: "fraction",
+    },
+  });
+  // 초기 애니메이션 아이콘 숨기기
+  $('.visual-mb').click(function(event){
+    event.stopPropagation()
+    $('.visual-mb-ani').fadeOut()
+  })
 
   // about 슬라이드
   let swAbout = new Swiper('.sw-about', {
