@@ -292,7 +292,7 @@ body {
   top: 50%;
   display: none;
   transform: translateY(-50%);
-  z-index: 999999;
+  z-index: 9999;
 }
 
 .section-menu li {
