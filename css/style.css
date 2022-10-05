@@ -53,14 +53,32 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 550px;
-  height: 400px;
-  background: url("../images/modalimg.png") no-repeat center #ddd;
+  height: 450px;
+  background: #fff;
   border-radius: 20px;
   padding: 10px;
   box-shadow: 0px 0px 7px 0px rgba(0 0 0 / 70%);
-  border: 5px solid rgba(0, 0, 0, 0.1);
 }
-
+.modal-img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 12px 22px 32px 6px rgb(94 94 105 / 25%),
+    0 8px 16px -8px rgb(94 94 105 / 30%), 0 -6px 16px -6px rgb(94 94 105 / 3%);
+}
+.modal-img img {
+  display: block;
+  width: 70%;
+  height: 70%;
+}
 .modal-main h1 {
   font-size: 30px;
   font-weight: 500;
@@ -75,6 +93,7 @@ body {
   font-weight: 400;
   color: #333;
   line-height: 1.8;
+  margin-bottom: 20px;
 }
 
 .modal-main b {
@@ -88,21 +107,29 @@ body {
   text-decoration: underline;
   color: #ed1c24;
 }
-.modal-line {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background: #999;
-  margin-top: 40px;
-  margin-bottom: 20px;
+.modal-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  height: 230px;
+  margin: 0 auto;
+  background: #2f3346;
+  border-radius: 20px;
+  padding-left: 10px;
 }
 .modal-main span {
+  display: block;
   font-size: 16px;
   font-weight: 400;
-  color: #333;
+  color: #a96e39;
   line-height: 1.8;
-  padding: 10px;
+  padding: 5px 10px;
   letter-spacing: 0.5px;
+}
+.modal-main span em {
+  color: #7084a0;
+  padding-right: 5px;
 }
 .modal-close {
   position: absolute;
@@ -110,10 +137,18 @@ body {
   top: 20px;
   border: 0;
   cursor: pointer;
-  font-size: 22px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
   color: #555;
-  background: transparent;
+  background: #727792;
   /* transition: transform 0.4s; */
+}
+.modal-close i {
+  font-size: 18px;
+  text-align: center;
+  line-height: 25px;
+  color: #e5e5e6;
 }
 
 .modal-close:hover {
@@ -124,6 +159,7 @@ body {
 .modal-close:active {
   font-size: 22px;
 }
+
 /* 공통클래스 */
 .clearfix::after {
   content: "";
