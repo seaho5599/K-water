@@ -26,13 +26,10 @@ K-water
       mobileBt.find("img").attr("src", "images/main_allmenu.png");
     }
   }
-
   wheelCheckFn();
-
   $(window).resize(function () {
     wheelCheckFn();
   });
-
   // 위치 파악 (Y 스크롤 이동 px )
   function resetSection() {
     $.each(section, function (index, item) {
@@ -44,16 +41,12 @@ K-water
     // footer 위치를 추가 및 변경 합니다.
     sectionPos[sectionPos.length] = Math.ceil(footer.offset().top);
   }
-
   // 최초에 새로고침 또는 실행시 위치값파악
   resetSection();
-
   // footer 추가로 인한 코드 위치 변경
   let sectionTotal = sectionPos.length;
-
   $(window).resize(function () {
     resetSection();
-
     if (wheelIng) {
       // 색상 셋팅
       sectionColor();
@@ -65,13 +58,11 @@ K-water
       });
     }
   });
-
   // 스크롤바의 윗쪽 위치값을 파악한다.
   $(window).scroll(function () {
     if (wheelIng) {
       return;
     }
-
     let tempY = $(window).scrollTop();
     tempY = Math.ceil(tempY);
     for (let i = sectionTotal - 1; i >= 0; i--) {
@@ -82,14 +73,12 @@ K-water
       }
     }
   });
-
   // 마우스 휠 체크
   $(window).bind("mousewheel DOMMouseScroll", function (event) {
     let distance = event.originalEvent.wheelDelta;
     if (distance == null) {
       distance = event.originalEvent.detail * -1;
     }
-
     // 화면 사이즈에 따른 작동여부
     if (wheelIng != true) {
       return;
